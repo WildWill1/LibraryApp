@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="star" viewBox="0 0 24 24">
+            <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>     
+        </symbol>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="plus" viewBox="0 0 24 24">
+            <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" />
+        </symbol>    
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="i" viewBox="0 0 48 48">
+            <path d="M0 0h48v48h-48z" fill="none"/><path d="M22 34h4v-12h-4v12zm2-30c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 36c-8.82 0-16-7.18-16-16s7.18-16 16-16 16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z"/>
+        </symbol>    
+    </svg>
+    <section class="bookshelf">
+        <div class="book" id="Index0" data-read="Unread">
+            <div class="title">
+                <span>Will Love's Neeloo</span>
+            </div>
+            <div class="rating">
+                <svg class="icon">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#star"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#star"></use>
+                </svg>
+            </div>
+            <dialog class="info-modal">
+                <form method="dialog">
+                    <span class="author">Author: Will</span>
+                    <span class="page-count">Page Count: 425</span>
+                    <aside class="review">
+                        I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!
+                    </aside>
+                    <button class="toggle-read">Read</button>
+                    <button class="delete">Remove Book</button>
+                    <button class="close">X</button>
+                </form>
+            </dialog>
+        </div>
+    </section>
+    <footer>
+        <button>
+            <svg class="icon">
+                <use xlink:href="#plus"></use>
+            </svg>
+        </button>
+    </footer>
+</body>
+</html>
+
