@@ -70,13 +70,23 @@ body {
     stroke-width: 1px;
 }
 
+.rating>.icon[data-fill="filled"] {
+    fill: gold;
+}
+
 .book>dialog>form {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content;
     align-items: center;
     justify-items: center;
     row-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.book>dialog>.actions {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .close {
@@ -106,6 +116,9 @@ body {
     grid-row: 3;
     font-style: italic;
     width: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .toggle-read {

@@ -24,38 +24,40 @@
         </symbol>    
     </svg>
     <section class="bookshelf">
-        <div class="book" id="Index0" data-read="Unread">
+        <div class="book" data-index="0" data-read="Unread">
             <div class="title">
                 <span>Will Love's Neeloo</span>
             </div>
             <div class="rating">
-                <svg class="icon">
+                <svg class="icon" data-id="1" data-fill="filled">
                     <use xlink:href="#star"></use>
                 </svg>
-                <svg class="icon">
+                <svg class="icon" data-id="2" data-fill="filled">
                     <use xlink:href="#star"></use>
                 </svg>
-                <svg class="icon">
+                <svg class="icon" data-id="3" data-fill="filled">
                     <use xlink:href="#star"></use>
                 </svg>
-                <svg class="icon">
+                <svg class="icon" data-id="4" data-fill="filled">
                     <use xlink:href="#star"></use>
                 </svg>
-                <svg class="icon">
+                <svg class="icon" data-id="5" data-fill="filled">
                     <use xlink:href="#star"></use>
                 </svg>
             </div>
             <dialog class="info-modal">
                 <form method="dialog">
-                    <span class="author">Author: Will</span>
-                    <span class="page-count">Page Count: 425</span>
+                    <span class="author"><strong>Author:</strong> Will</span>
+                    <span class="page-count"><strong>Page Count:</strong> 425</span>
                     <aside class="review">
                         I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!
                     </aside>
-                    <button class="toggle-read">Read</button>
-                    <button class="delete">Remove Book</button>
                     <button class="close">X</button>
                 </form>
+                <div class="actions">
+                    <button class="toggle-read">Read</button>
+                    <button class="delete">Remove Book</button>
+                </div>
             </dialog>
         </div>
     </section>
