@@ -8,6 +8,9 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+        <div class="site-name">My Library</div>
+    </header>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="star" viewBox="0 0 24 24">
             <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/>     
@@ -18,31 +21,26 @@
             <path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" />
         </symbol>    
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="i" viewBox="0 0 48 48">
-            <path d="M0 0h48v48h-48z" fill="none"/><path d="M22 34h4v-12h-4v12zm2-30c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 36c-8.82 0-16-7.18-16-16s7.18-16 16-16 16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z"/>
-        </symbol>    
-    </svg>
     <section class="bookshelf">
-        <div class="book" data-index="0" data-read="Unread">
+        <!--<div class="book" data-index="0" data-read="unread">
             <div class="title">
-                <span>Will Love's Neeloo</span>
+                <span>Will Loves Neeloo</span>
             </div>
             <div class="rating">
                 <svg class="icon" data-id="1" data-fill="filled">
-                    <use xlink:href="#star"></use>
+                    <use href="#star"></use>
                 </svg>
                 <svg class="icon" data-id="2" data-fill="filled">
-                    <use xlink:href="#star"></use>
+                    <use href="#star"></use>
                 </svg>
                 <svg class="icon" data-id="3" data-fill="filled">
-                    <use xlink:href="#star"></use>
+                    <use href="#star"></use>
                 </svg>
                 <svg class="icon" data-id="4" data-fill="filled">
-                    <use xlink:href="#star"></use>
+                    <use href="#star"></use>
                 </svg>
                 <svg class="icon" data-id="5" data-fill="filled">
-                    <use xlink:href="#star"></use>
+                    <use href="#star"></use>
                 </svg>
             </div>
             <dialog class="info-modal">
@@ -50,7 +48,7 @@
                     <span class="author"><strong>Author:</strong> Will</span>
                     <span class="page-count"><strong>Page Count:</strong> 425</span>
                     <aside class="review">
-                        I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!I really liked this book! I think it was a wonderful exploration of love!
+                        I really liked this book! I think it was a wonderful exploration of love!
                     </aside>
                     <button class="close">X</button>
                 </form>
@@ -59,14 +57,54 @@
                     <button class="delete">Remove Book</button>
                 </div>
             </dialog>
-        </div>
+        </div> -->
     </section>
     <footer>
-        <button>
+        <button class="add-book">
             <svg class="icon">
-                <use xlink:href="#plus"></use>
+                <use href="#plus"></use>
             </svg>
         </button>
+        <dialog class="add-book-modal">
+            <form method="dialog">
+                <div class="title-input">
+                    <label for="new-title">Title</label>
+                    <input type="text" name="new-title" id="new-title" required>
+                </div>
+                <div class="author-input">
+                    <label for="new-author">Author</label>
+                    <input type = "text" name = "new-author" id = "new-author" required>
+                </div>
+                <div class="page-count-input">
+                    <label for="new-page-count">Page Count</label>
+                    <input type = "number" name = "new-page-count" id = "new-page-count" required>
+                </div>
+                <div class="is-read">
+                    <span class="is-read-label">Read</span>
+                    <input type="checkbox" id="is-read" name="is-read" checked />
+                    <label for="is-read"></label>
+                </div>
+                <div class="review-text">
+                    <label for="review-text">Review</label>
+                    <textarea name="review-text" id="review-text" cols="30" rows="10" required></textarea>
+                </div>
+                <fieldset>
+                    <legend>Book Score</legend>
+                    <input type="radio" id="1" name="book-score" value="1" required>
+                    <label for="1">1</label>
+                    <input type="radio" id="2" name="book-score" value="2">
+                    <label for="2">2</label>
+                    <input type="radio" id="3" name="book-score" value="3">
+                    <label for="3">3</label>
+                    <input type="radio" id="4" name="book-score" value="4">
+                    <label for="4">4</label>
+                    <input type="radio" id="5" name="book-score" value="5">
+                    <label for="5">5</label>
+                </fieldset>
+                <button class="close">X</button>
+                <button class="submit">Add Book</button>
+            </form>
+        </dialog>
     </footer>
 </body>
 </html>

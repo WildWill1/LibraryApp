@@ -13,13 +13,36 @@ body {
     display: grid;
     grid-template-rows: min-content min-content;
     align-content: space-between;
-    background-color: var(--main-background-color);
+    background-color: white;
     gap: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+header {
+    display: grid;
+    background-color: white;
+    box-shadow: var(--shadows);
+    font-family: var(--font-family);
+    font-size: 30px;
+    height: 10dvh;
+    align-items: center;
+    grid-template-columns: 15dvw 1fr;
+}
+
+.site-name {
+    grid-column: 2;
 }
 
 .bookshelf {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(min-content,250px));
+    gap: 10px;
+    background-color: white;
+    justify-content: center;
+    padding-left: 10dvw;
+    padding-right: 10dvw;
     
 }
 
@@ -27,7 +50,6 @@ body {
     border-radius: 10px;
     padding: 10px;
     box-shadow: var(--shadows);
-    width: 300px;
     height: 75px;
     background-color: var(--book-color);
     display: grid;
@@ -36,7 +58,7 @@ body {
     overflow-y: hidden;
 }
 
-.bookshelf>.book[data-read="Unread"]{
+.bookshelf>.book[data-read="unread"]{
     background: linear-gradient(-135deg,#f8b73d 20px,#ffffff 20px); 
 }
 
@@ -111,14 +133,34 @@ body {
     grid-row: 2;
 }
 
-.review {
+.author-name {
+    font-weight: bold;
+}
+
+.author-value {
+    font-style: italic;
+}
+
+.page-count-name {
+    font-weight: bold;
+}
+
+.page-count-value {
+    font-style: italic;
+}
+
+.review-fieldset {
     grid-column: 1/-1;
     grid-row: 3;
+}
+
+.review-fieldset>legend {
+    font-weight: bold;
+}
+
+.review {
     font-style: italic;
     width: 250px;
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 10px;
 }
 
 .toggle-read {
@@ -161,11 +203,11 @@ dialog:modal {
 
 footer {
     justify-self: center;
-    grid-row: 2;
+    grid-row: 3;
 }
 
 footer>button {
-    background-color: var(--main-background-color);
+    background-color: white;
     border: none;
 }
 
@@ -173,9 +215,121 @@ footer>button>.icon {
     height: 75px;
     width: 75px;
     fill: rgb(172, 172, 172);
-    background-color: var(--main-background-color);
+    background-color: white;
 }
 
 footer>button>.icon:hover {
     opacity: 50%;
+}
+
+.add-book-modal>form {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    row-gap: 10px;
+    padding-bottom: 10px;
+}
+
+.title-input {
+    display: grid;
+    grid-row: 2;
+    justify-self: left;
+}
+
+.author-input {
+    display: grid;
+    grid-row: 3;
+    justify-self: left;
+}
+
+.page-count-input {
+    display: grid;
+    grid-row: 4;
+    justify-self: left;
+}
+
+.is-read {
+    grid-row: 5;
+    justify-self: left;
+    display: grid;
+    column-gap: 5px;
+}
+
+.review-text {
+    display: grid;
+    grid-row: 6;
+    justify-self: left;
+}
+
+.add-book-modal>form {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold; 
+}
+
+input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.is-read-label {
+    justify-self: left;
+    align-self: center;
+    grid-column: 2;
+}
+
+.is-read>label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 25px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.is-read>label::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;    
+}
+
+input[type="checkbox"]:checked + label {
+    background: #0075ff;
+}
+
+input[type="checkbox"]:checked + label:after {
+    left: calc(100%-5px);
+    transform: translateX(110%);
+}
+
+.is-read>label:active:after {
+    width: 22px;
+  }
+
+.add-book-modal>form>fieldset {
+    grid-row: 7;
+}
+
+.submit {
+    grid-row: 8;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    background-color: #0075ff;
+    color: white;
 }
